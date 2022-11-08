@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<Skein rootNode="node-1046">
+    <generator>Inform Mac Client (Inform version 1.82/6.41/10.1.2)</generator>
+    <item nodeId="node-1046">
+        <command xml:space="preserve">inform</command>
+        <result xml:space="preserve">
+
+
+
+inform
+An Interactive Fiction by Linden Killam
+Release 1 / Serial number 221108 / Inform 7 v10.1.2 / D
+
+Control Room
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1051"></child>
+            <child nodeId="node-1052"></child>
+        </children>
+    </item>
+    <item nodeId="node-1052">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+You can feel the dismbodied souls attaching themselves to you, interfering with your thoughts, as you stumble along.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1059"></child>
+        </children>
+    </item>
+    <item nodeId="node-1059">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">Please give one of the answers above.
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1051">
+        <command xml:space="preserve">hello</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+</Skein>

@@ -1,0 +1,59 @@
+! Blurb file created by Inform Inform 10.1.2 (build )
+
+status "/Applications/Inform.app/Contents/Resources/Internal/HTML/CblorbModel.html" "/Users/lindenkillam/Documents/American University/GAME 601/inform.inform/Build/StatusCblorb.html"
+
+
+! Identification
+
+project folder "/Users/lindenkillam/Documents/American University/GAME 601/inform.inform"
+release to "/Users/lindenkillam/Documents/American University/GAME 601/inform.materials/Release"
+
+! Blorb instructions
+
+storyfile leafname "inform.gblorb"
+storyfile "/Users/lindenkillam/Documents/American University/GAME 601/inform.inform/Build/output.ulx" include
+ifiction "/Users/lindenkillam/Documents/American University/GAME 601/inform.inform/Metadata.iFiction" include
+cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/DefaultCover.jpg"
+picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/DefaultCover.jpg"
+release file "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/DefaultCover.jpg"
+release file "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Small Cover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "5912E0CC-8518-42C2-AE1E-D5FAE7CFA0B5"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2022"
+placeholder [TITLE] = "inform"
+placeholder [AUTHOR] = "Linden Killam"
+placeholder [BLURB] = "A work of interactive fiction."
+
+! Other material to release
+
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "inform.gblorb.js"
+template path "/Users/lindenkillam/Documents/American University/GAME 601/inform.materials/Templates"
+template path "/Users/lindenkillam/Documents/American University/GAME 601/inform.materials/Templates"
+template path "/Users/lindenkillam/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+placeholder [INTERPRETERSCRIPTS] = " "
+interpreter "Quixe" "g"
+base64 "/Users/lindenkillam/Documents/American University/GAME 601/inform.inform/Build/output.ulx" to "/Users/lindenkillam/Documents/American University/GAME 601/inform.materials/Release/interpreter/inform.gblorb.js"
+
+! Website instructions
+
+template path "/Users/lindenkillam/Documents/American University/GAME 601/inform.materials/Templates"
+template path "/Users/lindenkillam/Documents/American University/GAME 601/inform.materials/Templates"
+template path "/Users/lindenkillam/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line3"><img border=0 src=inform:/doc_images/Reveal.png></a>||
+status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc410.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc409.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc410.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc402.html><img border=0 src=inform:/doc_images/help.png></a>||
