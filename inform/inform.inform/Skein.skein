@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1046">
+<Skein rootNode="node-1064">
     <generator>Inform Mac Client (Inform version 1.82/6.41/10.1.2)</generator>
-    <item nodeId="node-1046">
+    <item nodeId="node-1064">
         <command xml:space="preserve">inform</command>
         <result xml:space="preserve">
 
@@ -16,21 +16,21 @@ Control Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1051"></child>
-            <child nodeId="node-1052"></child>
+        <children><child nodeId="node-1067"></child>
+            <child nodeId="node-1065"></child>
         </children>
     </item>
-    <item nodeId="node-1052">
+    <item nodeId="node-1065">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Control Room
 You can feel the dismbodied souls attaching themselves to you, interfering with your thoughts, as you stumble along.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1059"></child>
+        <children><child nodeId="node-1066"></child>
         </children>
     </item>
-    <item nodeId="node-1059">
+    <item nodeId="node-1066">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">Please give one of the answers above.
 
@@ -38,7 +38,7 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1051">
+    <item nodeId="node-1067">
         <command xml:space="preserve">hello</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
