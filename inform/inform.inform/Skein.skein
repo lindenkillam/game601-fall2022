@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1064">
+<Skein rootNode="node-1046">
     <generator>Inform Mac Client (Inform version 1.82/6.41/10.1.2)</generator>
-    <item nodeId="node-1064">
+    <item nodeId="node-1046">
         <command xml:space="preserve">inform</command>
         <result xml:space="preserve">
 
@@ -10,27 +10,113 @@
 
 inform
 An Interactive Fiction by Linden Killam
-Release 1 / Serial number 221108 / Inform 7 v10.1.2 / D
+Release 1 / Serial number 221117 / Inform 7 v10.1.2 / D
 
 Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1067"></child>
-            <child nodeId="node-1065"></child>
+        <children><child nodeId="node-1049"></child>
+            <child nodeId="node-1047"></child>
         </children>
     </item>
-    <item nodeId="node-1065">
+    <item nodeId="node-1047">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel pretty good.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1048"></child>
+            <child nodeId="node-1055"></child>
+        </children>
+    </item>
+    <item nodeId="node-1055">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel pretty good.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1056"></child>
+        </children>
+    </item>
+    <item nodeId="node-1056">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel pretty good.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1057"></child>
+        </children>
+    </item>
+    <item nodeId="node-1057">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel pretty good.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1058"></child>
+        </children>
+    </item>
+    <item nodeId="node-1058">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel pretty good.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1059"></child>
+        </children>
+    </item>
+    <item nodeId="node-1059">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel pretty good.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1060"></child>
+        </children>
+    </item>
+    <item nodeId="node-1060">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
+You feel a slight, strange heaviness.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1061"></child>
+        </children>
+    </item>
+    <item nodeId="node-1061">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Control Room
+This is your station, the control room, where you can see out across all sides of the ship.
+
 You can feel the dismbodied souls attaching themselves to you, interfering with your thoughts, as you stumble along.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1066"></child>
-        </children>
     </item>
-    <item nodeId="node-1066">
+    <item nodeId="node-1048">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">Please give one of the answers above.
 
@@ -38,7 +124,7 @@ Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
 &gt; </result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1067">
+    <item nodeId="node-1049">
         <command xml:space="preserve">hello</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
