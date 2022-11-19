@@ -30,12 +30,13 @@ The Central Files is a room.
 
 The Locker Room is a room.
 
-The Stairwell is a room.
+The Stairwell is a room. The Stairwell is south of the Engine Room and west of Central Files.
 
 The Engine Room Door is a locked door. The Engine Room Door is east of the Engine Room and north of Central Files.
-
-The Stairwell is south of the Engine Room and west of Central Files.
 
 [CONTROL ROOM]
 
 The description of the Control Room is "This is your station, the control room, where you can see out across all sides of the ship."
+
+The control panel is a fixed in place thing in the Control Room. The control column is a supporter.
+
