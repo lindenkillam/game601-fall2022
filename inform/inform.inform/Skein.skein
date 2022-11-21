@@ -10,10 +10,12 @@
 
 inform
 An Interactive Fiction by Linden Killam
-Release 1 / Serial number 221117 / Inform 7 v10.1.2 / D
+Release 1 / Serial number 221118 / Inform 7 v10.1.2 / D
 
 Control Room
 This is your station, the control room, where you can see out across all sides of the ship.
+
+You can see a control panel here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
