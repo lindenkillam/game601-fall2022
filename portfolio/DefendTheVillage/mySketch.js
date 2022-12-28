@@ -75,9 +75,9 @@ class Ant {
 		arc(this.x-this.mandibleFrame, this.mandibleY, this.midRad, this.midRad, HALF_PI, PI, PIE);
 		
 		//Body
-		circle(this.x, this.backSide, this.thoraxRad);
+		circle(this.backX, this.backSide, this.thoraxRad);
 		circle(this.x, this.y, this.midRad);
-		circle(this.x, this.frontSide, this.midRad);
+		circle(this.frontX, this.frontSide, this.midRad);
 		
 		//Eyes
 		fill(255,0,0);
@@ -105,7 +105,6 @@ class Ant {
 	
 	antDies() {
 		let getRekt = this.eyeOffset * 2;
-		this.timeOfDeath = frameCount;
 		++score;
 		this.x += random(-getRekt, getRekt);
 		this.backX += random(-getRekt, getRekt);
@@ -117,8 +116,10 @@ class Ant {
 		this.frontSide += random(-this.eyeOffset, this.eyeOffset);
 		this.legOffset += random(-this.eyeOffset, this.eyeOffset);
 		this.legMovement = 0;
-		this.eyeOffset += random(-this.mandibleOffset, getRekt);
+		this.eyeOffset += random(-this.mandibleOffset, getRekt/2);
 		this.mandibleY += random(-this.mandibleOffset, this.mandibleOffset);
+		//this.drawAnt();
+		this.timeOfDeath = frameCount;
 	}
 }//End of Ant class
 
