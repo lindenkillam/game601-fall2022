@@ -21,9 +21,6 @@ class Ant {
 		this.rightSide = this.x + this.midRad - this.midRad/2.7;
 		this.backSide = this.y - this.midRad;
 		this.frontSide = this.y + this.midRad;
-		//this.frontHitBox = this.frontSide + this.midRad; //I don't know why this didn't work...
-		//this.leftHitBox = this.x - this.midRad; //These too
-		//this.rightHitBox = this.x + this.midRad;
 		this.legOffset = this.thoraxRad/3;
 		this.legFrame = random(-this.legOffset, this.legOffset);
 		this.legMovement = this.speed;
@@ -48,7 +45,8 @@ class Ant {
 				return;
 			}
 		}
-		else if(this.timeOfDeath < frameCount - deathTimer) { //Ant has been dead for a while; respawn rate intensifies over time
+		else if(this.timeOfDeath < frameCount - deathTimer) { //Ant has been dead for a while;
+			//respawn rate intensifies over time
 			ants.splice(i, 1);
 			ants.push(new Ant());
 			return;
@@ -104,8 +102,8 @@ class Ant {
 	}
 	
 	antDies() {
-		let getRekt = this.eyeOffset * 2;
 		++score;
+		let getRekt = this.eyeOffset * 2;
 		this.x += random(-getRekt, getRekt);
 		this.backX += random(-getRekt, getRekt);
 		this.frontX += random(-getRekt, getRekt);
@@ -116,9 +114,8 @@ class Ant {
 		this.frontSide += random(-this.eyeOffset, this.eyeOffset);
 		this.legOffset += random(-this.eyeOffset, this.eyeOffset);
 		this.legMovement = 0;
-		this.eyeOffset += random(-this.mandibleOffset, getRekt/2);
+		this.eyeOffset += random(-this.mandibleOffset, this.eyeOffset);
 		this.mandibleY += random(-this.mandibleOffset, this.mandibleOffset);
-		//this.drawAnt();
 		this.timeOfDeath = frameCount;
 	}
 }//End of Ant class
@@ -180,7 +177,6 @@ class Explosion {
 function fire() {
 	laser.play();
 	lasers.push(new Laser(player));
-	//print(lasers[0].x + ' ' + lasers[0].y + ' ' + lasers[0].lRight + '\n');
 }//End of fire function
 
 keyPressed = function() {
@@ -207,7 +203,6 @@ function resetGame() {
 	explosions = [];
 	for(let i = 0; i < numAnts; ++i) {
 		ants.push(new Ant());
-		//print(ants[i].frontHitBox + ' ' + ants[i].leftHitBox + ' ' + ants[i].rightHitBox + '\n');
 	}
 	player = new Player();
 	firingLine = firingLineFront + player.playerHalfHeight;
@@ -216,7 +211,7 @@ function resetGame() {
 	music.loop();
 }//End of resetGame function
 
-function preload() {
+function preload() { //Set the right files for things
 	backgroundImage = loadImage("Valley.png");
 	//Remember to enable the "p5.sound" parameter in the "SKETCH" tab of the project so sound will work.
 	music = loadSound("Level2.mp3");
@@ -227,10 +222,10 @@ function preload() {
 	explosion3 = loadImage("Explosion3.png");
 }//End of preload function
 
-function setup() {
+function setup() { //Runs before the first frame
 	createCanvas(windowWidth, windowHeight);
 	backgroundImage.resize(width, 0);
-	firingLineFront = height*3/4;//-height/32;
+	firingLineFront = height*3/4;
 	minThoraxRad = width/180.0;
 	maxThoraxRad = width/50.0;
 	laser.setVolume(0.1);
@@ -243,7 +238,7 @@ function setup() {
 	resetGame();
 }//End of setup function
 
-function draw() {
+function draw() { //This runs all the time, like "update" in Unity code
 	noTint();
 	image(backgroundImage, 0, 0);
 	
@@ -256,18 +251,17 @@ function draw() {
 	
 	for(let i = 0; i < ants.length; ++i) {		
 		
-		if(ants[i].timeOfDeath < 0) {
-			for(let j = 0; j < lasers.length; ++j) {
-				if(lasers[j].y <= ants[i].frontSide && lasers[j].x < ants[i].rightSide && lasers[j].lRight > ants[i].leftSide) {
-					//print("Hit! " + lasers[j].y + ' ' + ants[i].frontSide + '\n' + ' ' + ants[i].leftHitBox + ' ' + ants[i].rightHitBox + '\n'
-					//		 + lasers[j].x + ' ' + lasers[j].lRight);
+		if(ants[i].timeOfDeath < 0) { //Check to make sure the ant is alive, so timeOfDeath is -1
+			for(let j = 0; j < lasers.length; ++j) { //Check lasers against live ants for collisions
+				if(lasers[j].y <= ants[i].frontSide && lasers[j].x < ants[i].rightSide
+						&& lasers[j].lRight > ants[i].leftSide) {
 					lasers.splice(j, 1);
 					asplode.play();
 					explosions.push(new Explosion(ants[i].x-ants[i].midRad, ants[i].y-ants[i].midRad));
 					ants[i].antDies();
-					}
 				}
 			}
+		}
 		
 			ants[i].drawAnt(i);
 		} //End of ants for loop
@@ -297,12 +291,17 @@ function draw() {
 	
 	for(let i = 0; i < explosions.length; ++i) {
 		tint(255, explosions[i].alpha);
-		if(explosions[i].explosionType === 1)
-			image(explosion1, explosions[i].x, explosions[i].y);
-		else if(explosions[i].explosionType === 2)
-			image(explosion2, explosions[i].x, explosions[i].y);
-		else
-			image(explosion3, explosions[i].x, explosions[i].y);
+		switch(explosions[i].explosionType) {
+			case 1:
+				image(explosion1, explosions[i].x, explosions[i].y);
+				break;
+			case 2:
+				image(explosion2, explosions[i].x, explosions[i].y);
+				break;
+			default:
+				image(explosion3, explosions[i].x, explosions[i].y);
+				break;
+		}
 	
 		--explosions[i].alpha;
 		if(explosions[i].alpha <= 0)
